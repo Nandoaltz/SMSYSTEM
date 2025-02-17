@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+<div class="containerLogin">
+    <h1>Login</h1>
+   <form class="formLogin" id="loginForm">
+    <span>Seja bem vindo!</span>
+    <div>
+        <input type="text" name="email" id="email" placeholder="Digite seu email" required="required">
+    </div>
+    <div>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required="required">
+    </div>
+    <div>
+        <a class="linkCriarConta"href="http://localhost:8080/cadastrar ">Criar Conta</a>
+        <button type="submit" class="enviaform">Login</button>
+    </div>
+   </form>
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/login.js"></script>
+</body>
+</html>

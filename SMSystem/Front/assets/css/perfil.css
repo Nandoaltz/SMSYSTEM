@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.profile-card, .vehicle-card {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.profile-card h3, .vehicle-card h4 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+.profile-card p, .vehicle-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+.vehicle-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.vehicle-card:hover {
+    transform: scale(1.05);
+}

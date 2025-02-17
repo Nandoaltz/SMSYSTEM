@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+   <link rel="stylesheet" href="assets/css/login.css">
+    <title>Editar Perfil</title>
+</head>
+<body>
+<div class="containerLogin">
+    <h1>Editar Perfil</h1>
+    <div class="alert alert-success" role="alert" id="alerta" style="display: none;">
+        Perfil atualizado com sucesso!
+    </div>
+   <form class="formLogin" id="EditPeril">
+    <div>
+        <input type="text" name="name" id="nome" placeholder="Digite seu nome (Não Obrigatório)" required="true">
+    </div>
+    <div>
+        <input type="email" name="email" id="email" placeholder="Digite seu email (Não Obrigatório)" required="true">
+    </div>
+    <div>
+        <button type="submit" class="enviaform">Salvar e Alterar</button>
+    </div>
+   </form>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/EditarPerfil.js"></script>
+</body>
+</html>
