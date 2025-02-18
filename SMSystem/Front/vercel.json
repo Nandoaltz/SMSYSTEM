@@ -3,6 +3,6 @@
       { "src": "Front/**/*", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/Front/$1" }
+      { "src": "/(.*)", "dest": "/Front/views/$1" }
     ]
   }
