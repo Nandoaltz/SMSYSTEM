@@ -1,0 +1,6 @@
+{
+    "public": "Front",
+    "builds": [
+      { "src": "Front/**/*", "use": "@vercel/static" }
+    ]
+  }
