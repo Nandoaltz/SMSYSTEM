@@ -41,9 +41,12 @@ func PagRegistros(w http.ResponseWriter, r *http.Request) {
 	// Cria o slice para armazenar os registros
 	var registros []model.Registro
 
+<<<<<<< HEAD
 	for i, _ := range registros{
 		registros[i].Horario_Data.Format("02/01/2006 15:04:05")
 	}
+=======
+>>>>>>> b308f24 (Novas Funcionalidades)
 	// Decodifica o corpo da resposta JSON em registros
 	if erro := json.NewDecoder(response.Body).Decode(&registros); erro != nil {
 		respostas.ERRO(w, http.StatusBadRequest, erro)

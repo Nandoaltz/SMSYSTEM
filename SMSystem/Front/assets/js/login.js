@@ -11,7 +11,11 @@ function FazerLogin(event){
             senha:$("#senha").val()
         }
     }).done(function(){
+<<<<<<< HEAD
         window.location = "/home";
+=======
+        window.location.href = "/home";
+>>>>>>> b308f24 (Novas Funcionalidades)
     }).fail(function(){
         alert("Erro ao fazer login")
     })

@@ -18,7 +18,8 @@ body {
     background-color: #000000;
     border-radius: 10px;
     border: none;
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .enviaform:hover{
     cursor: pointer;
@@ -30,7 +31,7 @@ body {
     border-radius: 20px; /* Bordas arredondadas */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
     max-width: 400px; /* Largura máxima do container */
-    margin: 100px auto; /* Centraliza o container vertical e horizontalmente */
+    margin: 40px auto; /* Centraliza o container vertical e horizontalmente */
 }
 h1{
     text-align: center;
@@ -40,30 +41,20 @@ h1{
 .formLogin {
     text-align: center; /* Centraliza o conteúdo do formulário */
 }
-<<<<<<< HEAD
-=======
 .formLogin label{
     font-size: 16px; /* Ajusta o tamanho da fonte */
     margin-right: 20px; /* Aumenta o espaço entre os labels para separá-los mais */
     display: inline-block;  /* Centraliza o conteúdo do formulário */
 }
 .formLogin input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px; /* Espaço entre o input e o texto */
-    vertical-align: middle; /* Garante que o botão radio fique centralizado verticalmente */
+    width: 15px;
+    height: 15px;
+  /* Espaço entre o input e o texto */
+    vertical-align:auto;
+    align-items: start;
 }
 
->>>>>>> b308f24 (Novas Funcionalidades)
-span {
-    display: block; /* Faz com que o texto "Seja bem-vindo" ocupe uma linha inteira */
-    margin-bottom: 20px; /* Espaço abaixo do texto "Seja bem-vindo" */
-}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b308f24 (Novas Funcionalidades)
 input {
     font-size: 14px;
     color: black; /* Altera a cor do texto para preto ou outra cor desejada */
@@ -74,8 +65,4 @@ input {
     border-radius: 10px; /* Bordas arredondadas */
     background-color: #f0f0f0; /* Adiciona uma cor de fundo ao input para melhor visibilidade */
     margin-bottom: 15px; /* Adiciona espaço entre o campo de email e senha */
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b308f24 (Novas Funcionalidades)

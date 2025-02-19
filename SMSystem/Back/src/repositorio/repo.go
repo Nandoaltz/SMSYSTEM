@@ -16,6 +16,7 @@ func Repositorio(db *sql.DB)*DB{
 	return &DB{db}
 }
 func(repo DB)CriaUsuarios(u model.Usuarios)(uint64, error){
+<<<<<<< HEAD
 	u.DATA.Format("02/01/2006 15:04:05")
 	statment, erro := repo.db.Prepare("INSERT INTO Usuarios (nome, email, senha) VALUES (?,?,?)")
 	if erro != nil{
@@ -23,6 +24,16 @@ func(repo DB)CriaUsuarios(u model.Usuarios)(uint64, error){
 	}
 	defer statment.Close()
 	result, erro := statment.Exec(u.NOME, u.EMAIL, u.SENHA)
+=======
+	statment, erro := repo.db.Prepare("INSERT INTO Usuarios (NOME, EMAIL, SENHA, Tipo) VALUES (?,?,?,?)")
+	if erro != nil{
+		return 0, erro
+	}
+
+	defer statment.Close()
+
+	result, erro := statment.Exec(u.NOME, u.EMAIL, u.SENHA, u.TIPO)
+>>>>>>> b308f24 (Novas Funcionalidades)
 	if erro != nil{
 		return 0, erro
 	}
@@ -34,7 +45,11 @@ func(repo DB)CriaUsuarios(u model.Usuarios)(uint64, error){
 }
 func(repo DB)BuscarUsuario(u string)([]model.Usuarios, error){
 	u = fmt.Sprintf("%%%s%%", u)
+<<<<<<< HEAD
 	l, erro := repo.db.Query("select ID, NOME, EMAIL, DATA from Usuarios where NOME LIKE ?", u)
+=======
+	l, erro := repo.db.Query("select ID, NOME, EMAIL, Tipo, DATA from Usuarios where NOME LIKE ?", u)
+>>>>>>> b308f24 (Novas Funcionalidades)
 	if erro != nil{
 		return nil, erro
 	}
@@ -45,7 +60,11 @@ func(repo DB)BuscarUsuario(u string)([]model.Usuarios, error){
 	for l.Next(){
 		var Usuario model.Usuarios
 
+<<<<<<< HEAD
 		if erro := l.Scan( &Usuario.ID, &Usuario.NOME, &Usuario.EMAIL,&Usuario.DATA); erro != nil{
+=======
+		if erro := l.Scan( &Usuario.ID, &Usuario.NOME, &Usuario.EMAIL,&Usuario.TIPO, &Usuario.DATA); erro != nil{
+>>>>>>> b308f24 (Novas Funcionalidades)
 			return nil, erro
 		}
 		Usuarios = append(Usuarios, Usuario)
@@ -54,7 +73,11 @@ func(repo DB)BuscarUsuario(u string)([]model.Usuarios, error){
 }
 func(repo DB)BuscarUsuarioID(u uint64)(model.Usuarios, error){
 	
+<<<<<<< HEAD
 	l, erro := repo.db.Query("select ID, NOME, EMAIL, DATA from Usuarios where ID = ?", u)
+=======
+	l, erro := repo.db.Query("select ID, NOME, EMAIL, Tipo, DATA from Usuarios where ID = ?", u)
+>>>>>>> b308f24 (Novas Funcionalidades)
 	if erro != nil{
 		return model.Usuarios{}, nil
 	}
@@ -63,13 +86,35 @@ func(repo DB)BuscarUsuarioID(u uint64)(model.Usuarios, error){
 
 	var Usuario model.Usuarios
 	if l.Next(){
+<<<<<<< HEAD
 		if erro := l.Scan( &Usuario.ID, &Usuario.NOME, &Usuario.EMAIL,&Usuario.DATA); erro != nil{
+=======
+		if erro := l.Scan( &Usuario.ID, &Usuario.NOME, &Usuario.EMAIL,&Usuario.TIPO,&Usuario.DATA); erro != nil{
+>>>>>>> b308f24 (Novas Funcionalidades)
 			return model.Usuarios{}, erro
 		}
 	}
 
 	return Usuario, nil
 }
+<<<<<<< HEAD
+=======
+func(repo DB)TipoDeMotorista(u uint64)(string, error){
+	l, erro := repo.db.Query("select Tipo from Usuarios where ID = ?", u)
+	if erro != nil{
+		return "", erro
+	}
+	defer l.Close()
+
+	var U model.Usuarios
+	if l.Next(){
+		if erro := l.Scan(&U.TIPO); erro != nil{
+			return "", erro
+		}
+	}
+	return U.TIPO, nil
+}
+>>>>>>> b308f24 (Novas Funcionalidades)
 func(repo DB)UpdateUsers(id uint64, u model.Usuarios)(error){
 	request, err := repo.db.Prepare("Update Usuarios set NOME = ?, EMAIL = ? where ID = ?")
 	if err != nil{

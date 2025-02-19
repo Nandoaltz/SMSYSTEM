@@ -46,7 +46,11 @@ func UsuarioPOST(w http.ResponseWriter, r *http.Request){
  	userID , erro := repositorio.CriaUsuarios(user)
 	user.ID = userID
 	if erro != nil{
+<<<<<<< HEAD
 		respostas.ERRO(w, http.StatusInternalServerError, erro)
+=======
+		respostas.ERRO(w, http.StatusConflict, erro)
+>>>>>>> b308f24 (Novas Funcionalidades)
 		return
 	}
 	respostas.JSON(w, http.StatusCreated, user)

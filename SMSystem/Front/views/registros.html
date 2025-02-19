@@ -47,7 +47,12 @@
                         <th scope="col">Motorista</th>
                         <th scope="col">KM</th>
                         <th scope="col">Registro</th>
+<<<<<<< HEAD
                         <th scope="col">Data e Horário</th>
+=======
+                        <th scope="col">Data</th>
+                        <th scope="col">Horário</th>
+>>>>>>> b308f24 (Novas Funcionalidades)
                         <th scope="col">Inconsistência</th>
                     </tr>
                 </thead>
@@ -57,7 +62,12 @@
                         <td>{{.UsuarioNome}}</td>
                         <td>{{.KM}}</td>
                         <td>{{.Tipo}}</td>
+<<<<<<< HEAD
                         <td>{{.Horario_Data.Format "02/01/2006 - 15:04:05"}}</td>
+=======
+                        <td>{{.Horario_Data.Format "02/01/2006"}}</td>
+                        <td>{{.Horario_Data.Format "15:04:05"}}</td>
+>>>>>>> b308f24 (Novas Funcionalidades)
                         <td>
                             {{if .QuebraDeQuilometragem}}Sim{{else}}Não{{end}}
                         </td>

@@ -13,6 +13,10 @@ type Usuarios struct{
 	NOME string	`json:"nome,omitempty"`
 	EMAIL string `json:"email,omitempty"`
 	SENHA string `json:"senha,omitempty"`
+<<<<<<< HEAD
+=======
+	TIPO string `json:"tipos,omitempty"`
+>>>>>>> b308f24 (Novas Funcionalidades)
 	DATA time.Time `json:"data,omitempty"`
 }
 
