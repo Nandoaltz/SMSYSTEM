@@ -16,8 +16,7 @@ func Repositorio(db *sql.DB)*DB{
 	return &DB{db}
 }
 func(repo DB)CriaUsuarios(u model.Usuarios)(uint64, error){
-
-	statment, erro := repo.db.Prepare("INSERT INTO Usuarios (nome, email, senha) VALUES (?,?,?)")
+	statment, erro := repo.db.Prepare("INSERT INTO Usuarios (nome, email, senha, tipo) VALUES (?,?,?,?)")
 	if erro != nil{
 		return 0, erro
 	}
@@ -34,28 +33,28 @@ func(repo DB)CriaUsuarios(u model.Usuarios)(uint64, error){
 	}
 	return uint64(Id), nil
 }
-func(repo DB)BuscarUsuario(u string)([]model.Usuarios, error){
-	u = fmt.Sprintf("%%%s%%", u)
+func (repo DB) BuscarUsuario(u string) ([]model.Usuarios, error) {
+	u = fmt.Sprintf("%%%s%%", u) // Adiciona '%' para busca LIKE
 
-	l, erro := repo.db.Query("select ID, NOME, EMAIL, DATA from Usuarios where NOME LIKE ?", u)
-
-	if erro != nil{
+	l, erro := repo.db.Query("SELECT ID, NOME, EMAIL, Tipo, DATA FROM Usuarios WHERE NOME LIKE ?", u)
+	if erro != nil {
 		return nil, erro
 	}
 	defer l.Close()
 
-	var Usuarios []model.Usuarios
+	var usuarios []model.Usuarios
 
-	for l.Next(){
-		var Usuario model.Usuarios
-
-		if erro := l.Scan( &Usuario.ID, &Usuario.NOME, &Usuario.EMAIL,&Usuario.DATA); erro != nil{
-		Usuarios = append(Usuarios, Usuario)
+	for l.Next() {
+		var usuario model.Usuarios
+		if erro := l.Scan(&usuario.ID, &usuario.NOME, &usuario.EMAIL, &usuario.TIPO, &usuario.DATA); erro == nil {
+			usuarios = append(usuarios, usuario)
+		} else {
+			return nil, erro // Se houver erro no Scan, retorna o erro
+		}
 	}
-}
-	return Usuarios, nil
-}
 
+	return usuarios, nil
+}
 
 
 func (repo DB) BuscarUsuarioID(u uint64) (model.Usuarios, error){

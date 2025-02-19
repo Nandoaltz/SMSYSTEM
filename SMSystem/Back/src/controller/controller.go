@@ -30,13 +30,13 @@ func UsuarioPOST(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	if erro := user.Format("cadastro"); erro != nil{
-		respostas.ERRO(w, http.StatusConflict, erro)
+		respostas.ERRO(w, http.StatusBadRequest, erro)
 		return
 	}
 
 	db, erro := banco.ConnectDB()
 	if erro != nil{
-		respostas.ERRO(w, http.StatusConflict, erro)
+		respostas.ERRO(w, http.StatusBadRequest, erro)
 		return
 	}
 	
@@ -46,8 +46,7 @@ func UsuarioPOST(w http.ResponseWriter, r *http.Request){
  	userID , erro := repositorio.CriaUsuarios(user)
 	user.ID = userID
 	if erro != nil{
-
-		respostas.ERRO(w, http.StatusConflict, erro)
+		respostas.ERRO(w, http.StatusInternalServerError, erro)
 		return
 	}
 	respostas.JSON(w, http.StatusCreated, user)
