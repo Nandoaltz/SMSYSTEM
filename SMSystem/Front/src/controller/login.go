@@ -32,10 +32,7 @@ func FazerLogin(w http.ResponseWriter, r *http.Request){
         respostas.ERRO(w, http.StatusInternalServerError, erro)
         return
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b308f24 (Novas Funcionalidades)
     if resposta.StatusCode >= 400{
         respostas.ERROapi(w, resposta)
         return

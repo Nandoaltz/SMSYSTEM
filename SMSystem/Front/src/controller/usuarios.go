@@ -23,14 +23,13 @@ func CriarUmUsuario(w http.ResponseWriter, r *http.Request){
 		"nome": r.FormValue("nome"),
 		"email" : r.FormValue("email"),
 		"senha" : r.FormValue("senha"),
-<<<<<<< HEAD
-	})
-=======
 		"tipos": r.FormValue("tipos"),
+
 	})
 
+
 	fmt.Println(bytes.NewBuffer(user))
->>>>>>> b308f24 (Novas Funcionalidades)
+
 	
 	if erro != nil{
 		respostas.ERRO(w, http.StatusBadRequest, erro)
@@ -55,11 +54,6 @@ func CriarUmUsuario(w http.ResponseWriter, r *http.Request){
 	}
 	
 	defer resposta.Body.Close()
-
-<<<<<<< HEAD
-=======
-
->>>>>>> b308f24 (Novas Funcionalidades)
 	respostas.JSON(w, http.StatusCreated, map[string]string{"mensagem": "Usuário criado"})
 }
 func EditarPerfil(w http.ResponseWriter, r *http.Request){

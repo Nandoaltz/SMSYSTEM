@@ -1,19 +1,16 @@
 package controller
 
 import (
-<<<<<<< HEAD
-=======
 	aut "TCC/src/Auth"
->>>>>>> b308f24 (Novas Funcionalidades)
+
 	"TCC/src/banco"
 	"TCC/src/model"
 	"TCC/src/repositorio"
 	"TCC/src/respostas"
 	"encoding/json"
-<<<<<<< HEAD
-=======
+
 	"fmt"
->>>>>>> b308f24 (Novas Funcionalidades)
+
 	"io"
 	"net/http"
 	"strings"
@@ -41,11 +38,8 @@ func CadastrarVeiculo(w http.ResponseWriter, r *http.Request) {
         return
     }
     defer db.Close()
-<<<<<<< HEAD
 
     repo := repositorio.Repositorio(db)
-=======
-	repo := repositorio.Repositorio(db)
 	idUser, _ := aut.ExtrairIDDoToken(r)
 
 	fmt.Println("ID no token", idUser)
@@ -61,7 +55,7 @@ func CadastrarVeiculo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
->>>>>>> b308f24 (Novas Funcionalidades)
+
     if id, err := repo.CadastrarVeiculo(veiculo); err != nil {
        veiculo.ID = id
 		respostas.ERRO(w, http.StatusInternalServerError, err)

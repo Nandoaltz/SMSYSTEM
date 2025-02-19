@@ -40,8 +40,6 @@ h1{
 .formLogin {
     text-align: center; /* Centraliza o conteúdo do formulário */
 }
-<<<<<<< HEAD
-=======
 .formLogin label{
     font-size: 16px; /* Ajusta o tamanho da fonte */
     margin-right: 20px; /* Aumenta o espaço entre os labels para separá-los mais */
@@ -54,16 +52,11 @@ h1{
     vertical-align: middle; /* Garante que o botão radio fique centralizado verticalmente */
 }
 
->>>>>>> b308f24 (Novas Funcionalidades)
 span {
     display: block; /* Faz com que o texto "Seja bem-vindo" ocupe uma linha inteira */
     margin-bottom: 20px; /* Espaço abaixo do texto "Seja bem-vindo" */
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b308f24 (Novas Funcionalidades)
 input {
     font-size: 14px;
     color: black; /* Altera a cor do texto para preto ou outra cor desejada */
@@ -74,8 +67,4 @@ input {
     border-radius: 10px; /* Bordas arredondadas */
     background-color: #f0f0f0; /* Adiciona uma cor de fundo ao input para melhor visibilidade */
     margin-bottom: 15px; /* Adiciona espaço entre o campo de email e senha */
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b308f24 (Novas Funcionalidades)
