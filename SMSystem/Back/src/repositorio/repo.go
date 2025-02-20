@@ -254,7 +254,9 @@ func (repo DB) BuscarRegistros(veiculoID uint64) ([]model.Registro, error) {
               INNER JOIN 
                 Veiculos ON Veiculos.ID = Registros.veiculo_id 
               WHERE 
-                Registros.veiculo_id = ?`, veiculoID)
+                Registros.veiculo_id = ?
+				ORDER BY
+				Registros.horario_data ASC`, veiculoID)
     if err != nil {
         return nil, err
     }
