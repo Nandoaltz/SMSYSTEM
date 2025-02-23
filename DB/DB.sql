@@ -24,7 +24,7 @@ CREATE TABLE Registros (
     KM INT,
     QuebraKilometragem BOOLEAN DEFAULT FALSE,
     Tipo ENUM('chegada', 'saida') DEFAULT 'saida',
-     FOREIGN KEY (usuario_id) REFERENCES Usuarios(ID)
+    FOREIGN KEY (usuario_id) REFERENCES Usuarios(ID)
     ON DELETE SET NULL,
     FOREIGN KEY (veiculo_id) REFERENCES Veiculos(ID)
     ON DELETE SET NULL
