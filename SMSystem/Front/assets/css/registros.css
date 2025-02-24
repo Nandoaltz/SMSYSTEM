@@ -21,6 +21,7 @@ body {
     border-radius: 10px;
     border: none;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .enviaform:hover{

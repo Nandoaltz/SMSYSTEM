@@ -24,12 +24,11 @@ import (
 // }
 
 func JsonWebToken(usuarioID uint64) (string, error) {
-	claims := jwt.MapClaims{
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"sub":    usuarioID,                    // ID do usuário
 		"exp":   time.Now().Add(time.Hour * 5).Unix(), // Expiração do token
 		"authorized": true,            
-	}
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	})
 	return token.SignedString(config.Signiture)
 }
 

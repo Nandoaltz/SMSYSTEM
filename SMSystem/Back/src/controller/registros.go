@@ -101,3 +101,6 @@ func BuscarRegistros(w http.ResponseWriter, r *http.Request) {
     
      respostas.JSON(w, http.StatusAccepted, registros)
 }
+func NotaFiscal(w http.ResponseWriter, r *http.Request){
+    
+}

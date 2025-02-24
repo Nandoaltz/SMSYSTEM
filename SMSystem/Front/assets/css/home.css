@@ -62,4 +62,5 @@
 .add-vehicle-icon:hover {
     background-color: #ffffff;
     transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
 }
