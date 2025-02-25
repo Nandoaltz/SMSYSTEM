@@ -28,23 +28,13 @@ func Home(w http.ResponseWriter, r *http.Request){
 		return
 	}
 	var veiculos []model.Veiculo
-	var User model.Usuarios
+
 	if erro := json.NewDecoder(response.Body).Decode(&veiculos); erro != nil{
 		respostas.ERRO(w, http.StatusBadRequest, erro)
 		return
 	}
+
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-
-
-	IDCookie, erro := cookies.PegarIDUsuario(r)
-	if erro != nil{
-		respostas.ERRO(w, http.StatusConflict, erro)
-		return
-	}
-
-	User.ID, erro = strconv.ParseUint(IDCookie, 10, 64)
-
-	fmt.Println(" Usuario do cookie:", User.ID)
 
 	utils.Exec(w, "home.html", veiculos)
 }
