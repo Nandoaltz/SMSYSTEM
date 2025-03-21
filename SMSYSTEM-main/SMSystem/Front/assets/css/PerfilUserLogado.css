@@ -1,0 +1,89 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.profile-card, .vehicle-card {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.profile-card h3, .vehicle-card h4 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+.profile-card p, .vehicle-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+.vehicle-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.vehicle-card:hover {
+    transform: scale(1.05);
+}
+.enviaform {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+.enviaform:hover {
+    background: #000000;
+}
+.button-group {
+    display: flex;
+    gap: 10px;  /* Espaço entre os botões */
+    margin-top: 15px;
+    justify-content: left;
+    width: 100%;
+}
+.btn-confirm {
+    background-color: #dc3545 !important; /* Cor de fundo do botão de confirmação */
+    color: white !important; /* Cor do texto */
+    border-radius: 5px !important;
+    padding: 10px 20px;
+}
+
+.btn-confirm:hover {
+    background-color: #bb2d3b !important; /* Cor ao passar o mouse */
+}
+
+.btn-cancel {
+    background-color: #6c757d !important; /* Cinza */
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 10px 20px;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268 !important; /* Tom mais escuro */
+}
+
+#logout {
+    float: right; 
+    margin-top: 29px;
+    margin-left: 20PX;
+}

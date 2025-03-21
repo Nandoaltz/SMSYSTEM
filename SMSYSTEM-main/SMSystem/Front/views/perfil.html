@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/perfil.css">
+    <title>Perfil do Usuário</title>
+</head>
+<body>
+    {{template "NavBar"}}
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-card">
+                <h3>Informações do Usuário</h3>
+                <p><strong>Nome:</strong> {{.Usuario.NOME}}</p>
+                <p><strong>Email:</strong> {{.Usuario.EMAIL}}</p>
+                <p>{{.Usuario.TIPO}}</p>
+            </div>
+            <a href="/veiculos/{{.Veiculo.ID}}/registros" class="vehicle-card">
+                <h4>Último Veículo Utilizado</h4>
+                <p><strong>Nome:</strong> {{.Veiculo.Nome}}</p>
+                <p><strong>Placa:</strong> {{.Veiculo.Placa}}</p>
+            </a>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+</body>
+</html>

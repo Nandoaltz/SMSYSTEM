@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo para a lista de veículos */
+.vehicle-list {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* Estilo para os cartões */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 150px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Estilização do ícone de adicionar veículo */
+.add-vehicle-icon {
+
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.add-vehicle-icon:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}

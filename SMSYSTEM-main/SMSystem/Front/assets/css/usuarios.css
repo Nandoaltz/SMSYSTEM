@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo para a lista de usuários */
+.usuario-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+}
+
+/* Estilo para os cartões */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px; /* Aumentado para acomodar textos maiores */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> b308f24 (Novas Funcionalidades)

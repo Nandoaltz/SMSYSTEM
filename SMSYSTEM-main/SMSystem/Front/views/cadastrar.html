@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+   <link rel="stylesheet" href="assets/css/cadastrar.css">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <div class="containerLogin">
+        <h1>Cadastrar</h1>
+       <form class="formLogin" id="CadastroForm">
+        <div>
+            <input type="text" name="name" id="nome" placeholder="Digite seu nome" required="required">
+        </div>
+        <div>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required="required">
+        </div>
+        <div>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required="required">
+        </div>
+         <div>
+            <input type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha" required="required">
+        </div>
+        <div>
+            <input type="checkbox" id="gestor" name="tipo" value="gestor">
+            <label for="gestor">Gestor</label>
+            <input type="checkbox" id="motorista" name="tipo" value="motorista">
+            <label for="gestor">Motorista</label>
+        </div>
+        <div>
+            <button type="submit" class="enviaform">Cadastrar</button>
+            <a class="linkCriarConta"href="http://localhost:8080/login ">Faça Login</a>
+        </div>
+       </form>
+    </div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

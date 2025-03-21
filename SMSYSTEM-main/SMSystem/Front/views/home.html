@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <title>Home</title>
+</head>
+<body>
+
+  {{define "NavBar"}}
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="/assets/img/LogoMinimalista.png" alt="Logo" style="width: 50px; height: auto;">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link" href="/perfilUsuarioLogado">Perfil</a>
+           
+          </li>
+        </ul>
+        <form class="d-flex" role="search" action="/buscarUsuarios" method="GET">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="usuario" name="usuario">
+          <button class="btn btn-dark" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {{end}}
+
+  {{template "NavBar"}}
+
+  <div class="container">
+    <div class="vehicle-list">
+        {{range .}}
+        <a href="/veiculos/{{.ID}}/registros" class="card">
+            <h3>{{.Nome}}</h3>
+            <p>Placa: {{.Placa}}</p>
+        </a>
+        {{end}}
+    </div>
+
+    <!-- Ícone para adicionar veículo -->
+    <a href="http://localhost:8080/veiculos" class="add-vehicle-icon">
+        <img src="/assets/img/addition.png" width="25" height="25" alt="Ícone">
+    </a>
+</div>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script src="/assets/js/Home.js"></script>
+</body>
+</html>

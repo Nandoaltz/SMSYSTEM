@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/PerfilUserLogado.css">
+    <title>Perfil do Usuário</title>
+</head>
+<body>
+    {{template "NavBar"}}
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-card">
+                <h3>Informações do Usuário</h3>
+                <p><strong>Nome:</strong> {{.Usuario.NOME}}</p>
+                <p><strong>Email:</strong> {{.Usuario.EMAIL}}</p>
+                <p>{{.Usuario.TIPO}}</p>
+            </div>
+            <a href="/veiculos/{{.Veiculo.ID}}/registros" class="vehicle-card">
+                <h4>Último Veículo Utilizado</h4>
+                <p><strong>Nome:</strong> {{.Veiculo.Nome}}</p>
+                <p><strong>Placa:</strong> {{.Veiculo.Placa}}</p>
+            </a>
+        </div>
+        <button type="submit" class="btn btn-dark mt-4" onclick="window.location.href='/EditarPerfil?nome={{.Usuario.NOME}}&email={{.Usuario.EMAIL}}'" class="enviaform">Editar Perfil</button>
+        <button type="submit" class="btn btn-dark mt-4" class="enviaform" onclick="window.location.href='/AtualizarSenha'">Editar Senha</button>
+        <button id="excluir-conta" type="button" class="btn btn-danger mt-4" class="card-link">Excluir Perfil</button>
+        <a href="/logout">
+            <img id="logout" src="/assets/img/logout.png" width="25" height="25" alt="Ícone">
+        </a>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/assets/js/ExcluirConta.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f0f0f0; /* Cor de fundo */
+    font-family: Arial, sans-serif; /* Estilo de fonte */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+.enviaform {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 3;
+    padding: 0 20px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.enviaform:hover{
+    cursor: pointer;
+}
+
+.containerLogin {
+    background-color: #ffffff; /* Cor de fundo do container */
+    padding: 50px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 400px; /* Largura máxima do container */
+    margin: 40px auto; /* Centraliza o container vertical e horizontalmente */
+}
+h1{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px; /* Espaço abaixo do título "Login" */
+}
+.formLogin {
+    text-align: center; /* Centraliza o conteúdo do formulário */
+}
+.formLogin label{
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    margin-right: 20px; /* Aumenta o espaço entre os labels para separá-los mais */
+    display: inline-block;  /* Centraliza o conteúdo do formulário */
+}
+.formLogin input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  /* Espaço entre o input e o texto */
+    vertical-align:auto;
+    align-items: start;
+}
+
+
+input {
+    font-size: 14px;
+    color: black; /* Altera a cor do texto para preto*/
+    line-height: 2;
+    padding: 10px 20px; /* Aumentei o padding*/
+    width: 100%;
+    border: none; /* Remove as bordas */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f0f0f0; /* Adiciona uma cor de fundo ao input para melhor visibilidade */
+    margin-bottom: 15px; /* Adiciona espaço entre o campo de email e senha */
+}
